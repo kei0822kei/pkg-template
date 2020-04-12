@@ -3,7 +3,7 @@ deploy:
   repo: kei0822kei/pkg-template
   target_branch : master
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN
+  github_token: 98e87e7530b695096b266d51ebcce74d982c3fd2
   keep_history: true
   verbose : true
   on:
@@ -43,4 +43,4 @@ script:
     - if [ "$TRAVIS_BRANCH" == "gh-pages" ] ; then travis-sphinx build ; fi
 
 after_success:
-    - echo $GITHUB_TOKEN ; if [ "$TRAVIS_BRANCH" == "gh-pages" ] ; then travis-sphinx deploy ; fi
+    - if [ "$TRAVIS_BRANCH" == "gh-pages" ] ; then travis-sphinx deploy ; fi
