@@ -1,10 +1,10 @@
-package\_template package
-=========================
+pkg\_template package
+=====================
 
 Module contents
 ---------------
 
-.. automodule:: package_template
+.. automodule:: pkg_template
    :members:
    :special-members:
    :private-members:
