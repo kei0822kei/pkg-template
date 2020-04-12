@@ -33,9 +33,10 @@ before_install:
 install:
     - conda install --yes python="3.6" sphinx
     - pip install --user travis-sphinx
+    - pip install --user -e /home/travis/build/kei0822kei/package-template
 
 script:
-    - if [ "$TRAVIS_BRANCH" == "gh-pages" ] ; travis-sphinx build ; fi
+    - echo $TRAVIS_BRANCH; if [ "$TRAVIS_BRANCH" == "gh-pages" ] ; then travis-sphinx build ; fi
 
 after_success:
     - if [ "$TRAVIS_BRANCH" == "gh-pages" ] ; travis-sphinx deploy ; fi
