@@ -27,13 +27,13 @@ before_install:
   - chmod +x $HOME/miniconda3.sh
   - "$HOME/miniconda3.sh -b;"
   - export PATH=/home/travis/miniconda3/bin:$PATH
-  - export PYTHONPATH=/home/travis/build/kei0822kei/package-template:$PYTHONPATH
+  - export PYTHONPATH=/home/travis/build/kei0822kei/pkg-template:$PYTHONPATH
   - conda update --yes -n base -c defaults conda
 
 install:
     - conda install --yes python="3.6" sphinx
     - pip install --user travis-sphinx
-    - pip install -e "/home/travis/build/kei0822kei/package-template[docs]"
+    - pip install -e "/home/travis/build/kei0822kei/pkg-template[docs]"
 
 script:
     - echo $TRAVIS_BRANCH; if [ "$TRAVIS_BRANCH" == "gh-pages" ] ; then travis-sphinx build ; fi
