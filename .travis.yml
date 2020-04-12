@@ -1,13 +1,16 @@
 deploy:
   provider: pages
-  repo: kei0822kei/pkg-template
+  public_repo: kei0822kei/pkg-template
   target_branch : master
   skip_cleanup: true
-  github_token: 98e87e7530b695096b266d51ebcce74d982c3fd2
   keep_history: true
   verbose : true
   on:
     branch: gh-pages
+
+env:
+  global:
+  - secure: DXZ0NuzAPmNMy87C/DvUExhOr1JTvJcMwd+XpoIEvN07qkE3882DqOgItzAyBIGbrAluRhSFGjYN43mBVJS95svS05/J0Liv82Y6rnAekujeN3b2jJqkmjlSp17OTqQLBnksBQ2IotZIe5feEnF0nN1kwidoHvai11F6LBz6ABaEA/K3+PSicZv3m3sybeKej/4GM0DnPunhICD2Z86XuBtxY4SOypUGBX/+jMF12K4otga4LAxDl+6xCgIp5/2K67ynSW4lSiO858Den8OCUWoDLFD9pB/FYB6teOc0omW6iJLKPRu0aG9F1wVu277Q5VS/daCDKW6m2tgv7lp4WL5VVVYhAhv56KeA2zeDUr+gOR5S64ssCbvs9nQCqL/rnrTjjk7qOlxUtfqScKHVETx8cJw4uIKm9yRjpx1MkCR20bJwiglt5sAn1fzaUs7wv+T5OmB4Zx7aOU8sbpjx/0SyGuPSOkqCeZRcbzXmyj8VxM9Us6Ru4fdet+xlCaPdXff/fmGyl2xGrtumU4bvcXrdv09ynpACiegKwIYBu+51gK5JYhfvjScEDJ0XFGgTS9K11yukLCKMPj2RbaFS6IPy5/s3/zG9TlFhJQR/8NUSwxRYS4zVmUGU1jRdoxR/iUwHGW5sflW+cERCRCYsh+1g4NebQ+zBSqGwXRmlLus=
 
 branches:
   only:
