@@ -3,7 +3,6 @@ deploy:
   repo: kei0822kei/pkg-template
   target_branch : master
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN
   keep_history: true
   verbose : true
   on:
