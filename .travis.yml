@@ -1,12 +1,12 @@
-deploy:
-  provider: pages
-  public_repo: kei0822kei/pkg-template
-  target_branch : master
-  skip_cleanup: true
-  keep_history: true
-  verbose : true
-  on:
-    branch: gh-pages
+# deploy:
+#   provider: pages
+#   public_repo: kei0822kei/pkg-template
+#   target_branch : master
+#   skip_cleanup: true
+#   keep_history: true
+#   verbose : true
+#   on:
+#     branch: gh-pages
 
 env:
   global:
@@ -45,5 +45,5 @@ install:
 script:
     - if [ "$TRAVIS_BRANCH" == "gh-pages" ] ; then travis-sphinx build ; fi
 
-after_success:
-    - if [ "$TRAVIS_BRANCH" == "gh-pages" ] ; then travis-sphinx deploy ; fi
+# after_success:
+#     - if [ "$TRAVIS_BRANCH" == "gh-pages" ] ; then travis-sphinx deploy ; fi
